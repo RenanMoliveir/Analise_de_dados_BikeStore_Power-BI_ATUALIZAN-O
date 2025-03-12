@@ -12,5 +12,6 @@ Ferramenta: Power BI
 OS dados utilizados no projeto são do banco de dados Bike Store, da Microsoft; esse banco de dados é bastante conhecido por estudantes de análise de dados. Trata-se de um banco de dados relacional e contém informações sobre vendas, clientes e estoque.
 
 ### Conhecendo o banco de dados<br>
-O banco de dados utilizado para esse estudo é facilmente encontrado para Download e uma breve busca no google. para or projeto foi baixado no site da Kaggle, uma plataforma conhecida entre os análistas de dados para compartilhamento de análises e também por conter diversos database disponiveis para estudo.
+O banco de dados utilizado para esse estudo é facilmente encontrado para Download e uma breve busca no google. para or projeto foi baixado no site da Kaggle, uma plataforma conhecida entre os análistas de dados para compartilhamento de análises e também por conter diversos database disponiveis para estudo.##
+Após o Download do dataset foi utilizado o SQL Server para conexão e análise exploratória dos dados do Bike Store. Você pode conferir as Querys que foram feitas para explorar o banco de dados em outro [repositório](https://github.com/RenanMoliveir/Portifolio_Analise_BikeStore), nesse repositório o foco é no estudo através do Power BI.
 
