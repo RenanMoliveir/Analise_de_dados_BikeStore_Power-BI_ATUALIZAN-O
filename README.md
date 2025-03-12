@@ -18,6 +18,11 @@ Após algumas análises através de SQL observou-se que o modelo de dados podia 
 A seguir toda a documentação dos passos feitos para o processo de modelagem de dados através do PowerQuery<br>
 #### Tabela fact_sales
 A tabela fact_Sales originalmente contia algumas colunas de informações que foram removidas e também foram alterados o tipo de dados para melhorar a interação da tabela nas análises. Esse processo de modelagem dos dados no PowerQuery é necessário para se ter uma tabela fato "limpa", com o tipo de dados correto, além de melhorar o relacionamento com as outras tabela. As colunas de ID foram aletaradas para o tipo "Text", pois originalmente ela foi carregada com o tipo "number"; seguindo essa lógica, as colunas que não seriam usadas para somar seus valores foram alterados. Isso foi feito para as colunas de IDs de Orders, Store, Brand, Category, Product e Customer. O principal objetivo foi remover dados de características das vendas, concentrando apenas os dados de número da venda, ou seja, todas as características, como por exemplo, das lojas, dos produtos e clientes foram tratados em tabelas dimensão, cada um com uma tabela única, isso permite que se tenha um modelo de dados muito bem organizado e melhora as análises DAX, poupando processamento ou até mesmo fórmulas gigantescas e de difícil lógica. Todas as tabelas "dimensão" foram carregadas e modeladas separamente para melhorar o modelo e deixar apenas as colunas necessárias para análise.<br>
+#### PowerQuery
+= Table.TransformColumnTypes(Sales_Order,{{"OrderID", type text}, {"CustomerID", type text}})<br>
+= Table.TransformColumnTypes(#"Linhas Filtradas",{{"Status", type text}, {"OrderDate", type date}, {"RequiredDate", type date}, {"StoreID", type text}, {"EmployeeID", type text}})<br>
+= Table.TransformColumnTypes(#"Colunas Renomeadas",{{"ProductID", type text}})<br>
+= Table.RenameColumns(#"Tipo Alterado3",{{"Item ID", "ItemID"}, {"Sales.OrderItem.Quantity", "OrderItem.Quantity"}, {"Sales.OrderItem.ListPrice", "Price"}, {"Sales.OrderItem.Discount", "Discount"}, {"Sales.OrderItem.LineTotal", "Total"}})<br>
 Abaixo a tabela fact_sales:
 <br>
 <br>
