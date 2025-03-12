@@ -23,8 +23,8 @@ A tabela fact_Sales originalmente contia algumas colunas de informações que fo
 = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Status", type text}, {"OrderDate", type date}, {"RequiredDate", type date}, {"StoreID", type text}, {"EmployeeID", type text}})<br>
 = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"ProductID", type text}})<br>
 = Table.RenameColumns(#"Tipo Alterado3",{{"Item ID", "ItemID"}, {"Sales.OrderItem.Quantity", "OrderItem.Quantity"}, {"Sales.OrderItem.ListPrice", "Price"}, {"Sales.OrderItem.Discount", "Discount"}, {"Sales.OrderItem.LineTotal", "Total"}})<br>
-Abaixo a tabela fact_sales:
-<br>
+### Tabela fact_sales<br>
+Baixo a tabela fact_sales após o tratamento dos dados, contendo apenas os dados necessários sobre as vendas, com datas e Ids.
 <br>
 ![1-fact_sales](https://github.com/user-attachments/assets/9c1f60c4-584b-4607-a684-79a60ed6325d)
 
