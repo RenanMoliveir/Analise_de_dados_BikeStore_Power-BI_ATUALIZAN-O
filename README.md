@@ -55,5 +55,5 @@ Abaixo está a tabela `fact_sales` após o tratamento dos dados, contendo apenas
 
 ---
 
-Com essas melhorias, seu texto fica mais fluido e informativo, com uma melhor divisão de seções e maior clareza nas explicações.
+
 
