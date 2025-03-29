@@ -54,6 +54,16 @@ Abaixo está a tabela `fact_sales` após o tratamento dos dados, contendo apenas
 ![1-fact_sales](https://github.com/user-attachments/assets/9c1f60c4-584b-4607-a684-79a60ed6325d)
 
 ---
+### Tabela dim_product
+
+Seguindo a mesma lógica, o mesmo foi feito para a tabela `dim_product`, onde foi selecionado apenas os campos necessários para melhor performance. O primeiro passo foi a alteração de tipo de dados para o tipo correto. Segue abaixo as alterações feitas:
+= Table.TransformColumnTypes(Production_Product,{{"ProductID", type text}, {"Name", type text}, {"BrandID", type text}, {"CategoryID", type text}, {"ModelYear", type text}})
+Essas alterações são extremamente importante para a performance das análises.
+<br>
+= Table.RemoveColumns(#"Tipo Alterado",{"Production.Category", "Sales.OrderItem"})
+= Table.NestedJoin(#"Colunas Removidas1", {"CategoryID"}, dim_category, {"CategoryID"}, "dim_category", JoinKind.LeftOuter)
+A coluna da categoria de produtos foi trazido através da ferramenta de Mesclas Consultas, dentro do Power Query, isso permitiu fazer o Merge das duas tabelas em uma única. Por se tratar de uma característica de produtos, optou-se por aproveitar essa informação junto à tabela `dim_product`.
+
 
 
 
