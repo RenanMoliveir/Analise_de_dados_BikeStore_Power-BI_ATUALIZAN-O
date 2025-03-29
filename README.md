@@ -75,8 +75,8 @@ Algumas colunas não eram essenciais para a análise e foram removidas para redu
 
 powerquery
 ```
-Copiar
-Editar
+
+
 = Table.RemoveColumns(#"Tipo Alterado", {"Production.Category", "Sales.OrderItem"})
 ```
 🔹 3. Junção com a Tabela dim_category
@@ -84,9 +84,15 @@ A coluna de categoria de produtos foi adicionada por meio da ferramenta Mesclar 
 
 powerquery
 ```
-Copiar
-Editar
+
+
 = Table.NestedJoin(#"Colunas Removidas1", {"CategoryID"}, dim_category, {"CategoryID"}, "dim_category", JoinKind.LeftOuter)
 ```
 Por se tratar de uma característica dos produtos, optamos por manter essa informação diretamente na tabela dim_product, otimizando a modelagem e facilitando as análises.
+<br>
+Logo abaixo a tabela `dim_product` após o tratamento dos dados.
+<br>
+<br>
+![dim_product](https://github.com/user-attachments/assets/7c4290c7-b4dc-4893-bd87-d7ef4b4d438b)
+
 
