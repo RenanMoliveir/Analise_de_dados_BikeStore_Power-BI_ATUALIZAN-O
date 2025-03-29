@@ -1,6 +1,8 @@
 # Análise do banco de dados Bike Store com Power BI
 
-**Projeto de análise de dados do banco de dados Bike Store com Power BI.**
+<details>
+<summary><strong>🔧 Modelagem de Dados</strong></summary>
+Projeto de análise de dados do banco de dados Bike Store com Power BI.
 
 ## 📌 Descrição
 
@@ -99,4 +101,4 @@ Após o processo de mesclar consultas entre as tabela a tabela `dim_category` fo
 
 ![dim_category](https://github.com/user-attachments/assets/73c34135-dfde-4612-906b-e9d2e61a46ad)
 
-
+</details> 
