@@ -95,4 +95,8 @@ Logo abaixo a tabela `dim_product` após o tratamento dos dados.
 <br>
 ![dim_product](https://github.com/user-attachments/assets/7c4290c7-b4dc-4893-bd87-d7ef4b4d438b)
 
+Após o processo de mesclar consultas entre as tabela a tabela `dim_category` foi desabilitada sua carga.
+
+![dim_category](https://github.com/user-attachments/assets/73c34135-dfde-4612-906b-e9d2e61a46ad)
+
 
