@@ -72,7 +72,7 @@ O primeiro passo foi garantir que cada coluna estivesse no tipo correto:
     {"ModelYear", type text}
 })
 ```
-🔹 2. Remoção de Colunas Desnecessárias
+🔹 2. Remoção de Colunas Desnecessárias<br>
 Algumas colunas não eram essenciais para a análise e foram removidas para reduzir a carga do modelo:
 
 powerquery
@@ -81,7 +81,7 @@ powerquery
 
 = Table.RemoveColumns(#"Tipo Alterado", {"Production.Category", "Sales.OrderItem"})
 ```
-🔹 3. Junção com a Tabela dim_category
+🔹 3. Junção com a Tabela dim_category<br>
 A coluna de categoria de produtos foi adicionada por meio da ferramenta Mesclar Consultas no Power Query. Isso permitiu o Merge entre as tabelas, consolidando os dados:
 
 powerquery
